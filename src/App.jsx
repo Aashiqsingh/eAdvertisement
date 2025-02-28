@@ -9,10 +9,14 @@ import { UserSidebar } from './Component/layout/UserSidebar';
 import { Route, Routes } from 'react-router-dom';
 import { UserProfile } from './Component/user/UserProfile';
 import { Signup } from './Component/common/Signup';
+import axios from 'axios';
 
 function App() {
 
+  axios.defaults.baseURL = "http://localhost:3000"
+
   return (
+
 
     <body className='layout-fixed sidebar-expand-lg bg-body-tertiary sidebar-open app-loaded'>
       <div className='app-wrapper'>

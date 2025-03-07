@@ -1,60 +1,66 @@
-body{
-    background-image: url('https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg');
-    background-size: cover;
-}
 .main{
-    position: relative;
-    left: 470px;
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
 }
-.signup-container {
-    width: 320px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  input {
+.left{
+    flex: 50;
+    background-color: lightcoral;
+    /* height: auto; */
+
+}
+.right{
+    flex: 50;
+    background-color: lightblue;
+    background-image: url('https://cdn4.vectorstock.com/i/1000x1000/42/83/sign-up-neon-on-a-brick-background-vector-35024283.jpg');
+    background-size: 100% 110%;
+}
+.container{
+    height: 300px;
+    width: 25%;
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 10%;
+    left: 12%;
+}
+.txt{
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .error {
-    color: red;
-    font-size: 12px;
-  }
-  
-  .signup-button {
-    width: 100%;
+    height: 40px;
     padding: 10px;
-    background: #007bff;
-    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 6px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .signup-button:hover {
-    background: #0056b3;
-  }
-  
+    padding-left: 20px;
+    outline: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.37);
+}
+.btn{
+    height: 50px;
+    width: 100%;
+    font-size: 22px;
+    margin-top: 5px;
+    background-color: skyblue;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+    
+}
+@media(max-width:800px)
+{
+    .main{
+        display: flex;
+        flex-direction: column;
+        height: 160vh;
+    }
+    .left{
+        height: 100vh;
+    }
+    .right{
+        height: 100vh;
+    }
+    .container{
+        width: 70%;
+    }
+}

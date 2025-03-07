@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../assets/signup.css';
 
 export const Signup = () => {
 
@@ -41,7 +42,7 @@ export const Signup = () => {
     }
     
   return (
-    <div>    
+    <div className='main'>    
         <ToastContainer
 position="top-right"
 autoClose={5000}
@@ -55,37 +56,38 @@ pauseOnHover
 theme="dark"
 transition={Bounce}
 />
-        <h1>Signup</h1>
-
-        <form onSubmit={handleSubmit(submitHandler)}>
+      <div className='left'>  
+    <div className='container'>
+    <h1 style={{textAlign:"center"}}>Signup</h1>
+        <form  onSubmit={handleSubmit(submitHandler)}>
             <div>
-                <label htmlFor="">FirstName</label>
-                <input type="text" {...register("firstName")} />
+                <input className='txt'  type="text" placeholder='FirstName...' {...register("firstName")} />
             </div>
             <div>
-                <label htmlFor="">LastName</label>
-                <input type="text" {...register("lastName")} />
+                <input className='txt' type="text" placeholder='LastName...' {...register("lastName")} />
             </div>
             <div>
-                <label htmlFor="">Age</label>
-                <input type="number" {...register("age")} />
+                <input className='txt' type="number" placeholder='Age...' {...register("age")} />
             </div>
             <div>
-                <label htmlFor="">Status</label>
-                <input type="text" {...register("status")} />
+                <input className='txt' type="text" placeholder='Status...' {...register("status")} />
             </div>
             <div>
-                <label htmlFor="">Email</label>
-                <input type="text" {...register("email")} />
+                <input className='txt' type="text" placeholder='Email...' {...register("email")} />
             </div>
             <div>
-                <label htmlFor="">Password</label>
-                <input type="password" {...register("password")} />
+                <input className='txt' type="password" placeholder='Password...' {...register("password")} />
             </div>
             <div>
-                <input type="submit" />
+                <input type="submit" className='btn' value="Signup" />
             </div>
         </form>
+        </div>
     </div>
+    <div className='right'>
+        
+    </div>
+    </div>
+    
   )
 }

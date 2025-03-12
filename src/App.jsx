@@ -13,6 +13,8 @@ import axios from 'axios';
 import { Login } from './Component/common/Login';
 import { AgencySidebar } from './Component/layout/AgencySidebar';
 import { AgencyProfile } from './Component/admin/AgencyProfile';
+import { AgencyProfile2 } from './Component/admin/AgencyProfile2';
+import { ViewMyScreen } from './Component/admin/ViewMyScreen';
 
 function App() {
 
@@ -37,7 +39,9 @@ function App() {
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/agencysidebar' element={<AgencySidebar/>}>
-          <Route path='agencyprofile' element={<AgencyProfile/>}></Route>
+          {/* <Route path='agencyprofile' element={<AgencyProfile/>}></Route> */}
+          <Route path='agencyprofile2' element={<AgencyProfile2/>}></Route>
+          <Route path='myscreen' element={<ViewMyScreen/>}></Route>
         </Route>
        </Routes>
       </div>
